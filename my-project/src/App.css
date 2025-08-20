@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(2, 0, 15);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar */
+.sideBar {
+  flex: 2;
+  border-right: 1px solid rgb(100, 100, 100);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: rgb(5, 5, 26);
+}
+
+/* Parte superior da Sidebar */
+.upperSide {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2.5rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  height: 70%;
+}
+
+.upperSideTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.brad {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Botão Novo Chat */
+.midBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background: rgb(76, 76, 208);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 2rem;
+}
+
+.midBtn:hover {
+  background: rgb(70, 70, 200);
+}
+
+/* Queries */
+.upperSideBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  
+  margin-bottom: 35rem;
+}
+
+
+
+.query {
+  width: 100%;
+  padding: 0.5rem;
+  background: rgb(30, 30, 80);
+  border: 1px solid rgb(98, 98, 98, 1);
+  border-radius: 0.5rem;
+  color: rgba(222, 222, 222, 1);
+  font-size: 1.4rem;
+  text-align: left;
+  cursor: pointer;
+  padding-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.query:hover {
+  background: rgb(50, 50, 120);
+}
+
+.query>img {
+  margin-right: 2rem;
+  margin-left: 1rem;
+  object-fit: cover;
+  height: 2rem;
+  width: 25px;
+  margin-top: 10px;
+
+}
+
+/* Parte inferior da Sidebar */
+.lowerSide {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(100, 100, 100);
+}
+
+.listItems {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.listItems:hover {
+  transform: scale(1.02) translateX(8px);
+
+}
+
+.listItemsImg {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.listItems:nth-child(1)>.listItemsImg {
+  margin-right: 2.45rem;
+}
+
+.listItems:nth-child(2)>.listItemsImg {
+  margin-right: 2.75rem;
+}
+
+.listItems:nth-child(3)>.listItemsImg {
+  margin-right: 2.35rem;
+}
+
+/* Área principal */
+.main {
+  flex: 9;
+  padding: 2rem;
+}
+
+.main {
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 10rem;
+  margin-bottom: 0;
+}
+
+/* Personalizando a barra de rolagem no chat */
+.chats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1; 
+  padding-bottom: 5rem; 
+  overflow-y: scroll; /* Barra de rolagem vertical */
+  scroll-behavior: smooth;
+  width: 100%;
+  height: calc(100vh - 17rem);
+}
+
+/* Personalizando o trilho (track) da barra de rolagem */
+.chats::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Personalizando a parte visível da barra de rolagem */
+.chats::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 10px; 
+  transition: background-color 0.3s; 
+}
+
+/* Efeito de hover no "polegar" da barra de rolagem */
+.chats::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+/* Personalizando o trilho da barra de rolagem */
+.chats::-webkit-scrollbar-track {
+  background: #222; 
+  border-radius: 10px; 
+}
+
+/* Personalizando a área da barra de rolagem */
+.chats::-webkit-scrollbar-corner {
+  background-color: transparent; 
+}
+
+.chat {
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+}
+.chatimg{
+  object-fit: cover;
+  width: 10rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+.chat p{
+  font-size: 20px;
+  margin-right: 90px;
+}
+
+.bot{
+  background: rgba(28, 30, 58,1);
+  width: fit-content;
+  border-radius: 2rem;
+}
+
+.chatFooter {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto; /* Empurra o footer para baixo */
+}
+.chatFooter>p{
+  margin: 2rem;
+}
+
+.inp {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 2rem;
+  padding: 0.8rem;
+  background: rgba(50, 50, 78, 1);
+}
+
+.chatInput {
+  flex: 1;
+  outline: none;
+  padding: 1rem;
+  color: white;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+}
+
+.send {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.send img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.send:hover img {
+  transform: scale(1.2);
+}
+
+/*Animação de carregamento*/
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.loading-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #9ed7ff;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+/* animação da logo*/
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  height: 6rem;
+  animation: rotateLogo 10s linear infinite;
+}

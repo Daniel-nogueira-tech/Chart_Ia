@@ -1,0 +1,12 @@
+/* custom-prism.css */
+pre.custom-code {
+  background: #c3c1c1;  /* um cinza azulado claro */
+  border: 3px solid hsl(0, 0%, 20%);
+  border-radius: 10px;
+  width: 100%;
+}
+
+code.language-javascript {
+  background: transparent;
+  font-size: 0.95em;
+}
